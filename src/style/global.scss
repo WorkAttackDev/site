@@ -1,0 +1,40 @@
+@import "./theme.scss";
+
+// setup the font
+@font-face {
+	font-family: "Poppins";
+	src: url("/font/Poppins-Regular.ttf");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", Helvetica, sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+
+	@media screen and (max-width: $tablet) {
+		font-size: 52.5%;
+	}
+
+	@media screen and (min-width: $landscape) {
+		font-size: 72.5%;
+	}
+
+	@media screen and (min-width: $landscape + 500) {
+		font-size: 120%;
+	}
+
+	@media screen and (max-height: $tablet - 100) {
+		font-size: 62.5%;
+	}
+}
+
+body,
+#sapper {
+	min-height: 100vh;
+	overflow: hidden;
+}
